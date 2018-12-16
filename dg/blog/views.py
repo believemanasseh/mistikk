@@ -21,10 +21,6 @@ def post_new(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
-<<<<<<< HEAD
-            post.published_date = timezone.now()
-=======
->>>>>>> f1e2af238eff37ffa4fd241b82cafd73455460c0
             post.save()
             return redirect('post_detail', pk=post.pk)
     else:
@@ -32,20 +28,6 @@ def post_new(request):
     return render(request, 'blog/post_edit.html', {'form': form})
 
 def post_edit(request, pk):
-<<<<<<< HEAD
-    post = get_object_or_404(Post, pk=pk)
-    if request.method == "POST":
-        form = PostForm(request.POST, instance=post)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            post.published_date = timezone.now()
-            post.save()
-            return redirect('post_detail', pk=post.pk)
-    else:
-        form = PostForm(instance=post)
-    return render(request, 'blog/post_edit.html', {'form': form})
-=======
 	post = get_object_or_404(Post, pk=pk)
 	if request.method == "POST":
 		form = PostForm(request.POST, instance=post)
@@ -71,8 +53,6 @@ def post_remove(request, pk):
 	post = get_object_or_404(Post, pk=pk)
 	post.delete()
 	return redirect('post_list')
-
->>>>>>> f1e2af238eff37ffa4fd241b82cafd73455460c0
 
 
 

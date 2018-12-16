@@ -1,24 +1,19 @@
-{% load static %}
+{% load staticfiles %}
 <html>
 	<head>
 		<title>MIS-TIKKAL</title>
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 		<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+		<link rel="stylesheet" link href="{% static "css/blog.css" %}">
    	</head>
   	 <body>
         <div class='page-header'>
 		{% if user.is_authenticated %}
-			<a href="http://127.0.0.1:8000/posts/new" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-<<<<<<< HEAD
-		{% endif %}	
-            <h1><a href="/">My Personal Blog</a></h1>
-=======
-			<a href="http://127.0.0.1:8000/drafts" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
-		{% endif %}	
+			<a href="http://mistikk.pythonanywhere.com/posts/new" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+			<a href="http://mistikk.pythonanywhere.com/drafts" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+		{% endif %}
             <h1><a href="/">MIS-TIKKAL</a></h1>
->>>>>>> f1e2af238eff37ffa4fd241b82cafd73455460c0
         </div>
 <div class="content container">
     <div class="row">
@@ -29,4 +24,4 @@
     </div>
 </div>
      </body>
-</html> 
+</html>
