@@ -1,6 +1,7 @@
 {% load static %}
-<html>
-	<head>
+<! DOCTYPE html>
+<html lang="en">
+	<head><meta charset="utf-8"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>MIS-TIKKAL</title>
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
@@ -13,9 +14,9 @@
 			<a href="http://127.0.0.1:8000/posts/new" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 			<a href="http://127.0.0.1:8000/drafts" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
 		{% endif %}	
-            <h1><a href="/">MIS-TIKKAL</a></h1>
+            <h1 class="main"><a href="/">MIS-TIKKAL</a></h1>
         </div>
-<div class="content container">
+<div class="container">
     <div class="row">
         <div class="col-md-8">
            {% block content %}
