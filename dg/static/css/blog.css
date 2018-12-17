@@ -3,10 +3,15 @@ h1 a, h2 a {
 	font-family: 'Lobster';
 }
 
+<<<<<<< HEAD
 body {
 	background-color: #000000;
 	overflow-x: hidden;
 	padding-left: 2px;
+=======
+* {
+	padding-left: 15px;
+>>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
 }
 
 .page-header {

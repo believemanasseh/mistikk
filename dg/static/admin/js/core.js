@@ -4,6 +4,7 @@
 var isOpera = (navigator.userAgent.indexOf("Opera") >= 0) && parseFloat(navigator.appVersion);
 var isIE = ((document.all) && (!isOpera)) && parseFloat(navigator.appVersion.split("MSIE ")[1].split(";")[0]);
 
+<<<<<<< HEAD
 // Cross-browser event handlers.
 function addEvent(obj, evType, fn) {
     'use strict';
@@ -42,6 +43,8 @@ function cancelEventPropagation(e) {
     }
 }
 
+=======
+>>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
 // quickElement(tagType, parentReference [, textInChildNode, attribute, attributeValue ...]);
 function quickElement() {
     'use strict';
@@ -68,7 +71,11 @@ function removeChildren(a) {
 
 // ----------------------------------------------------------------------------
 // Find-position functions by PPK
+<<<<<<< HEAD
 // See http://www.quirksmode.org/js/findpos.html
+=======
+// See https://www.quirksmode.org/js/findpos.html
+>>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
 // ----------------------------------------------------------------------------
 function findPosX(obj) {
     'use strict';

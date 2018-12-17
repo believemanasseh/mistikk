@@ -12,7 +12,11 @@
             }
         });
         // Add toggle to anchor tag
+<<<<<<< HEAD
         $("fieldset.collapse a.collapse-toggle").click(function(ev) {
+=======
+        $("fieldset.collapse a.collapse-toggle").on('click', function(ev) {
+>>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
             if ($(this).closest("fieldset").hasClass("collapsed")) {
                 // Show
                 $(this).text(gettext("Hide")).closest("fieldset").removeClass("collapsed").trigger("show.fieldset", [$(this).attr("id")]);
