@@ -13,11 +13,7 @@
  * and modified for Django by Jannis Leidel, Travis Swicegood and Julien Phalip.
  *
  * Licensed under the New BSD License
-<<<<<<< HEAD
  * See: http://www.opensource.org/licenses/bsd-license.php
-=======
- * See: https://opensource.org/licenses/bsd-license.php
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
  */
 (function($) {
     'use strict';
@@ -62,11 +58,7 @@
                     addButton = $this.filter(":last").next().find("a");
                 }
             }
-<<<<<<< HEAD
             addButton.click(function(e) {
-=======
-            addButton.on('click', function(e) {
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
                 e.preventDefault();
                 var template = $("#" + options.prefix + "-empty");
                 var row = template.clone(true);
@@ -99,11 +91,7 @@
                     addButton.parent().hide();
                 }
                 // The delete button of each row triggers a bunch of other things
-<<<<<<< HEAD
                 row.find("a." + options.deleteCssClass).click(function(e1) {
-=======
-                row.find("a." + options.deleteCssClass).on('click', function(e1) {
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
                     e1.preventDefault();
                     // Remove the parent form containing this button:
                     row.remove();
@@ -157,17 +145,10 @@
 
 
     // Tabular inlines ---------------------------------------------------------
-<<<<<<< HEAD
     $.fn.tabularFormset = function(options) {
         var $rows = $(this);
         var alternatingRows = function(row) {
             $($rows.selector).not(".add-row").removeClass("row1 row2")
-=======
-    $.fn.tabularFormset = function(selector, options) {
-        var $rows = $(this);
-        var alternatingRows = function(row) {
-            $(selector).not(".add-row").removeClass("row1 row2")
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
             .filter(":even").addClass("row1").end()
             .filter(":odd").addClass("row2");
         };
@@ -231,17 +212,10 @@
     };
 
     // Stacked inlines ---------------------------------------------------------
-<<<<<<< HEAD
     $.fn.stackedFormset = function(options) {
         var $rows = $(this);
         var updateInlineLabel = function(row) {
             $($rows.selector).find(".inline_label").each(function(i) {
-=======
-    $.fn.stackedFormset = function(selector, options) {
-        var $rows = $(this);
-        var updateInlineLabel = function(row) {
-            $(selector).find(".inline_label").each(function(i) {
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
                 var count = i + 1;
                 $(this).html($(this).html().replace(/(#\d+)/g, "#" + count));
             });
@@ -307,7 +281,6 @@
     $(document).ready(function() {
         $(".js-inline-admin-formset").each(function() {
             var data = $(this).data(),
-<<<<<<< HEAD
                 inlineOptions = data.inlineFormset;
             switch(data.inlineType) {
             case "stacked":
@@ -315,18 +288,6 @@
                 break;
             case "tabular":
                 $(inlineOptions.name + "-group .tabular.inline-related tbody tr").tabularFormset(inlineOptions.options);
-=======
-                inlineOptions = data.inlineFormset,
-                selector;
-            switch(data.inlineType) {
-            case "stacked":
-                selector = inlineOptions.name + "-group .inline-related";
-                $(selector).stackedFormset(selector, inlineOptions.options);
-                break;
-            case "tabular":
-                selector = inlineOptions.name + "-group .tabular.inline-related tbody:first > tr";
-                $(selector).tabularFormset(selector, inlineOptions.options);
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
                 break;
             }
         });
