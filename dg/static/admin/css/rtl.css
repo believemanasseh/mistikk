@@ -35,11 +35,7 @@ th {
     margin-right: 1.5em;
 }
 
-<<<<<<< HEAD
 .addlink, .changelink {
-=======
-.viewlink, .addlink, .changelink {
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
     padding-left: 0;
     padding-right: 16px;
     background-position: 100% 1px;
@@ -184,11 +180,7 @@ input[type=submit].default, .submit-row input.default {
     float: left;
 }
 
-<<<<<<< HEAD
 fieldset .field-box {
-=======
-fieldset .fieldBox {
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
     float: right;
     margin-left: 20px;
     margin-right: 0;

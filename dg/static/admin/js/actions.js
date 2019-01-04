@@ -71,28 +71,16 @@
                 showClear();
             }
         });
-<<<<<<< HEAD
         $(options.allToggle).show().click(function() {
             checker($(this).prop("checked"));
             updateCounter();
         });
         $("a", options.acrossQuestions).click(function(event) {
-=======
-        $(options.allToggle).show().on('click', function() {
-            checker($(this).prop("checked"));
-            updateCounter();
-        });
-        $("a", options.acrossQuestions).on('click', function(event) {
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
             event.preventDefault();
             $(options.acrossInput).val(1);
             showClear();
         });
-<<<<<<< HEAD
         $("a", options.acrossClears).click(function(event) {
-=======
-        $("a", options.acrossClears).on('click', function(event) {
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
             event.preventDefault();
             $(options.allToggle).prop("checked", false);
             clearAcross();
@@ -100,11 +88,7 @@
             updateCounter();
         });
         lastChecked = null;
-<<<<<<< HEAD
         $(actionCheckboxes).click(function(event) {
-=======
-        $(actionCheckboxes).on('click', function(event) {
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
             if (!event) { event = window.event; }
             var target = event.target ? event.target : event.srcElement;
             if (lastChecked && $.data(lastChecked) !== $.data(target) && event.shiftKey === true) {
@@ -125,26 +109,15 @@
             lastChecked = target;
             updateCounter();
         });
-<<<<<<< HEAD
         $('form#changelist-form table#result_list tr').find('td:gt(0) :input').change(function() {
             list_editable_changed = true;
         });
         $('form#changelist-form button[name="index"]').click(function(event) {
-=======
-        $('form#changelist-form table#result_list tr').on('change', 'td:gt(0) :input', function() {
-            list_editable_changed = true;
-        });
-        $('form#changelist-form button[name="index"]').on('click', function(event) {
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
             if (list_editable_changed) {
                 return confirm(gettext("You have unsaved changes on individual editable fields. If you run an action, your unsaved changes will be lost."));
             }
         });
-<<<<<<< HEAD
         $('form#changelist-form input[name="_save"]').click(function(event) {
-=======
-        $('form#changelist-form input[name="_save"]').on('click', function(event) {
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
             var action_changed = false;
             $('select option:selected', options.actionContainer).each(function() {
                 if ($(this).val()) {

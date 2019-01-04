@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 /*global gettext, pgettext, get_format, quickElement, removeChildren, addEvent*/
-=======
-/*global gettext, pgettext, get_format, quickElement, removeChildren*/
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
 /*
 calendar.js - Calendar functions by Adrian Holovaty
 depends on core.js for utility functions like removeChildren or quickElement
@@ -107,11 +103,7 @@ depends on core.js for utility functions like removeChildren or quickElement
             function calendarMonth(y, m) {
                 function onClick(e) {
                     e.preventDefault();
-<<<<<<< HEAD
                     callback(y, m, django.jQuery(this).text());
-=======
-                    callback(y, m, this.textContent);
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
                 }
                 return onClick;
             }
@@ -138,11 +130,7 @@ depends on core.js for utility functions like removeChildren or quickElement
 
                 var cell = quickElement('td', tableRow, '', 'class', todayClass);
                 var link = quickElement('a', cell, currentDay, 'href', '#');
-<<<<<<< HEAD
                 addEvent(link, 'click', calendarMonth(year, month));
-=======
-                link.addEventListener('click', calendarMonth(year, month));
->>>>>>> 7b825a43d15c4a80af35c812a3960cfdaeea238f
                 currentDay++;
             }
 
