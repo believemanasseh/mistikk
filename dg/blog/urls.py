@@ -4,6 +4,8 @@ from . import views
 app_name = 'blog'
 
 urlpatterns = [
+	url(r'^posts/contact/$', views.post_contact, name='post_contact'),
+	url(r'^posts/about/$', views.post_about, name='post_about'),
 	url(r'^posts/(?P<pk>[0-9]+)/remove/$', views.post_remove, name='post_remove'),
 	url(r'^posts/(?P<pk>[0-9]+)/publish/$', views.post_publish, name='post_publish'),
 	url(r'^drafts/$', views.post_draft_list, name='post_draft_list'),
