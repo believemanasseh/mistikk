@@ -1,3 +1,3 @@
-# MY BLOG
-	A mobile-friendly web application. It is also responsive, available and accessible offline.
+# MISTIKK
+	A user-friendly web application software. My personal blog space - created "to satisfy your intellectual appetite."
 
