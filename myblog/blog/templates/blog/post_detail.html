@@ -1,25 +1,15 @@
+{% load static %}
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
 		<title>Mis-tikkal</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="static/assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
-	</head>
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/static/assets/css/noscript.css" /></noscript>
 	<body class="is-preload">
 	<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
-
-				<!-- Intro -->
-					<div id="intro">
-						<h1>This is<br />
-						Mis-tikkal</h1>
-						<p>...to satisfy your intellectual appetite</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+			<div id="wrapper" class="fade-in"> 
 
 				<!-- Header -->
 					<header id="header">
@@ -30,8 +20,8 @@
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a href="http://127.0.0.1:8000/">Home</a></li>
-							<li><a href="http://127.0.0.1:8000/posts/about">About</a></li>
-							<li><a href="http://127.0.0.1:8000/posts/contact">Contact</a></li>
+							<li><a href="http://127.0.0.1:8000/about">About</a></li>
+							<li><a href="http://127.0.0.1:8000/contact">Contact</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -41,29 +31,17 @@
 						</ul>
 					</nav>
 
-					<div id="main">
-          				 	{% block content %}
-           					 {% endblock %}
-    
-<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip; </span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
-
-					</div>
-
+				<!-- Post -->
+					<span class="date">{{ post.published_date }}</span>
+			<div>		
+				<div id="main">					
+        			<h2>{{ post.title }}</h2>
+					<div class="image fit"><img src="/static/images/pic01.jpg" alt="" /></div>
+        			<p>{{ post.text|linebreaksbr }}</p>
+				</div>
 
 				<!-- Copyright -->
+
 					<div id="copyright">
 						<ul><li>&copy; 2018</li></ul>
 					</div>
