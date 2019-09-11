@@ -40,6 +40,25 @@
         			<p>{{ post.text|linebreaksbr }}</p>
 				</div>
 
+<<<<<<< HEAD
+{% block content %}
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+{% else %}
+    <a class="btn btn-default" href="http://mistikk.pythonanywhere.com/posts/{{ post.pk }}/publish">Publish</a>
+{% endif %}
+		{% if user.is_authenticated %}
+		<a class="btn btn-default" href="http://mistikk.pythonanywhere.com/posts/{{ post.pk }}/edit"><span class="glyphicon glyphicon-pencil"></span></a>
+		<a class="btn btn-default" href="http://mistikk.pythonanywhere.com/posts/{{ post.pk }}/remove"><span class="glyphicon glyphicon-remove"></span></a>
+		{% endif %}
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}
+=======
 				<!-- Copyright -->
 
 					<div id="copyright">
@@ -59,3 +78,4 @@
 
 	</body>
 </html>
+>>>>>>> bc371fb7d07f9de53bde1daac5397bce995eaa89
