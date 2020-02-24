@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+{% for post in posts %}
+<!-- Main -->
+	<div id="main">
+		<!-- Posts -->
+			<article>
+					<header>
+						<span class="date">{{ post.published_date }}</span>
+						<h2><a href="http://mistikk.pythonanywhere.com/posts/{{ post.pk }}">{{ post.title }}</a></h2>
+					</header>
+					<a href="#" class="image fit"><img src="/static/images/pic02.jpg" alt="" /></a>
+					<p>{{ post.text|safe|truncatewords:"40"|linebreaks }}</p>
+					<ul class="actions special">
+						<li><a href="http://mistikk.pythonanywhere.com/posts/{{ post.pk }}" class="button">Full Story</a><li>
+					</ul>
+			</article>
+	</div>
+{% endfor %}
+{% endblock %}
