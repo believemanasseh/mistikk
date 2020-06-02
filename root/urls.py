@@ -1,9 +1,9 @@
 #root urls
 
-from django.conf.urls import url, include
+from django.urls import path, include
 from django.contrib import admin
 
 urlpatterns = [
-	url('admin/', admin.site.urls),
-	url(r'^', include('blog.urls')),
+	path('admin/', admin.site.urls),
+	path('', include('blog.urls')),
 ]
