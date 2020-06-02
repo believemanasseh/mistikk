@@ -1,6 +1,5 @@
-"""
-This version of this project was written in django version==1.11
-"""
+# Root settings for project mistikk!
+
 
 import os
 
@@ -9,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
+# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '64@+jj5sqyv-7ry+v3%8$rxeui&3-%ra)i)7#z5g@c=u=0=3_!'
@@ -17,18 +16,20 @@ SECRET_KEY = '64@+jj5sqyv-7ry+v3%8$rxeui&3-%ra)i)7#z5g@c=u=0=3_!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.pythonanywhere.com']
 
 # Application definition
 
 INSTALLED_APPS = [
-	'blog',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # local apps
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -67,8 +68,12 @@ WSGI_APPLICATION = 'root.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mistikk',
+        'USER': 'mistikk',
+        'PASSWORD': 'mistikk',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -90,7 +95,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
