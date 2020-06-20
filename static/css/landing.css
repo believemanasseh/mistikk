@@ -1,0 +1,17 @@
+/* CSS for landing page */
+
+body {
+	background-color: rgb(255, 255, 255); 
+	background-size: cover;
+	background-position: center;
+	background-attachment: ;
+}
+
+.container {
+	position: static;
+	margin: 100px;
+	border: 2px solid;
+	width: 500px;
+	
+	padding: 10px;
+}

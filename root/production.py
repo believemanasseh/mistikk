@@ -1,6 +1,5 @@
 # Root settings for project mistikk!
 
-
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -16,7 +15,7 @@ SECRET_KEY = '64@+jj5sqyv-7ry+v3%8$rxeui&3-%ra)i)7#z5g@c=u=0=3_!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -27,8 +26,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # local apps
     'blog',
 ]
 
@@ -70,8 +67,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'mistikk',
-        'USER': 'mistikk',
-        'PASSWORD': 'mistikk',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '',
     }
